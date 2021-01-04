@@ -171,9 +171,14 @@
 										<li>Every time you run the same query, you get the cache of a previous query.</li>
 										<li>Every time you upload data into BigQuery, all data is compressed and encrypted by default.</li>
 										<li>When new record is saved, it's split up into data encrypted blocks being distributed among servers inside of data center.</li>
+										<li>BigQuery uses a query execution engine <b>Dremel</b>, which scans billions of data rows in a few seconds.
+												Dremel uses parallel quering to scan data distributed into chunks of 64 megabytes among many computing resources named nodes, which are grouped into clusters.</li>
+										<li>A tree architecture splitting queries among thousands of computing node ensures high speed performance
+											s
+										</li>
 									</ul>
 
-									<h5>Cloud Storage::</h5>
+									<h5>Cloud Storage:</h5>
 									<ul>
 										<li>It's a file storage service for storing and accessing data on Google's infrastructure.</li>
 										<li>We can work with Cloud Storage using console on web GCP UI or with gsutil CLI.</li>
@@ -201,7 +206,7 @@
 								<div class="container">
 									<h3>Setup</h3>
 
-
+									<p>Google Cloud Account creation required.</p>
 
 								</div>
 							</section>
