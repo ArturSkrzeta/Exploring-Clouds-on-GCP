@@ -94,16 +94,6 @@
 										<li>It launches a Linux terminal on a Virtual Machine which comes pre-configured with our project's credentials.</li>
 										<li>It has also common programming laguange pre-installed like Python, Node, PHP as well as infrastructure tooling like Docker and Kubernetes.</li>
 										<li>Gives quick access to GCP resources from withing a browser without having to installing any local terminal.</li>
-										<li>Terminal:
-											<br>
-											- switching between projects:
-											<br>
-											<code>gcloud config set project project-name</code>
-											<br>
-											- listing all compute instances:
-											<br>
-											<code>gcloud compute instances list</code>
-										</li>
 										<li>It is the best practice to use terminal when going with app to production.
 											Running gcloud scripts allow to do reproducible service configuration and to avoid any miclicks when setting in GCP console.</li>
 									</ul>
@@ -111,7 +101,8 @@
 									<h5>Cloud SDK</h5>
 									<ul>
 										<li>It is the Google cloud's command line interface tool fot executing commands or making configuration changes to the GCP.</li>
-										<li>Once logged into GCP, termial asks us to choose a project we want to proceed with in a specific region and zone.</li>
+										<li>It starts from a project folder on your local machine.</li>
+										<li>Once logged into GCP, terminal asks us to choose a project we want to proceed with in a specific region and zone.</li>
 										<li>Besides creating and managing GCP resources it allows us to make scripts and automations.</li>
 										<li>There are 3 main GCP SDK CLI tools:
 											<br>
@@ -124,6 +115,17 @@
 											- using command <code>gcloud</code> we get all grouped commands available:
 											<br><br>
 											<img src="images/gcloud.JPG" width="650">
+											<br>
+											- switching between projects:
+											<br>
+											<code>gcloud config set project project-name</code>
+											<br>
+											- listing all compute instances:
+											<br>
+											<code>gcloud compute instances list</code>
+											<br>
+											- project initializaiton in current directory:
+											<code>gcloud init {project-name}</code>
 										</li>
 									</ul>
 
