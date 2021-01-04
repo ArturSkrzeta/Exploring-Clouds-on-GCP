@@ -80,6 +80,61 @@
 								<div class="container">
 									<h3>Demo</h3>
 
+									<h5>Cloud Shell:</h5>
+									<ul>
+										<li>It launches a Linux terminal on a Virtual Machine which comes pre-configured with our project's credentials.</li>
+										<li>It has also common programming laguange pre-installed like Python, Node, PHP as well as infrastructure tooling like Docker and Kubernetes.</li>
+										<li>Giver quick access to GCP resources from withing a browser without having to installing any local terminal..</li>
+									</ul>
+
+									<h5>Cloud SDK</h5>
+									<ul>
+										<li>It is the Google cloud's command line interface tool fot executing commands or making configuration changes to the GCP.</li>
+										<li>Once logged into GCP, termial asks us to choose a project we want to proceed with in a specific region and zone.</li>
+										<li>Besides creating and managing GCP resources it allows us to make scripts and automations.</li>
+										<li>There are 3 main GCP SDK CLI tools:
+											<br>
+											- <b>gsutil</b> for Google Cloud Storage.<br>
+											- <b>bq</b> for BigQuery.<br>
+											- <b>gcloud</b> for the rest of Google Cloud services.
+										</li>
+										<li>Gcloud:
+											<br>
+											- using command <code>gcloud</code> we get all grouped commands available:
+											<br><br>
+											<img src="images/gcloud.JPG" width="650">
+										</li>
+									</ul>
+
+									<h5>Google App Engine:</h5>
+									<ul>
+										<li>It provisions programming technology, librariesa, frameworks, servers and scales app instnaces on demand.</li>
+										<li>Deployment:
+											<br>
+											- getting to the directory where your app is located and running below command:
+											<br>
+											<code>gcloud app deploy app.yaml</code>
+											<br>
+											- in <code>app.yaml</code> we define runtime e.g. <code>runtime: nodejs10</code>
+											<br>
+											- once deployment completed, it provides us with a web path of the application.
+										</li>
+										<li>App Engine components:
+											<br><br>
+											<img src="images/app_engine.JPG" width="650">
+											<br>
+											- GCO can only have one Enginge Application,<br>
+											- when having a large application we can separate logical components into independent services,<br>
+											- each service can have multiple versions that differs with some functionality of fron-end element,<br>
+											- each version can have multiple instances for scaling capacity to handle traffic on the application.
+										</li>
+										<li>We can access app's service with url:
+											<br>
+											<code>https://{service-name}-dot-{project-name}-{region-id}.df.r.appspot.com</code>
+											<br>
+
+										</li>
+									</ul>
 
 									<!-- <h5>Message Broker:</h5>
 									<ul>
