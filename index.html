@@ -169,13 +169,18 @@
 											<br>
 											- Section 1 selected shows SQL query area.<br>
 											- Section 2 selected show data table.<br>
-											- Data can be uploaded from CSV.
+											- Data can be uploaded from CSV.<br>
+											- Schema can be set automatically by BigQuery.<br>
+											- Hierarchy: project (main dicionary), dataset (container of data from one specific area), tables/views:<br>
+												<br>
+												<img src="images/project.JPG">
+											- We can proceed with data visualization in Data Studio then.
 										</li>
 										<li>BigQuery architecture:
 											<br><br>
 											<img src="images/architecture.JPG" width="650"><span style="font-size:12px">source: GCP</span>
 											<br>
-											- The storage and the computre parts are decoupled.<br>
+											- The storage and the computing parts are decoupled.<br>
 											- It can take stream data or batch data as an input.<br>
 											- Storage and compute parts are connected with highly performing network.<br>
 											- We can access BigQuery with GCP console, CLI, by making calls to BigQuery REST API or using client libraries as Java or Python.
