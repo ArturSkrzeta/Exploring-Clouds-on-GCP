@@ -247,6 +247,23 @@
 											<img src="images/struct.JPG"><br>
 											- structs works as a container and can house arrays.
 										</li>
+										<li>Select Array with Structs:
+											<br>
+											<code>SELECT ARRAY(</code><br>&nbsp&nbsp
+												<code>SELECT AS STRUCT</code><br>&nbsp&nbsp
+												<code>21 As Age,</code><br>&nbsp&nbsp
+												<code>'Artur' As Name</code><br>&nbsp&nbsp
+												<code>['Apple','Pear','Plum'] As Items</code><br>&nbsp&nbsp
+												<code>UNION ALL</code><br>&nbsp&nbsp
+												<code>SELECT AS STRUCT</code><br>&nbsp&nbsp
+												<code>66 As Age,</code><br>&nbsp&nbsp
+												<code>'Robert' As Name</code><br>&nbsp&nbsp
+												<code>['Carrot','Tomato'] As Items As Items</code><br>
+											<code>) As Customers</code><br><br>
+											-result:<br>
+											<img src="images/array_struct.JPG"><br>
+											- we get array of struct data types.
+										</li>
 									</ul>
 
 									<h5>Cloud Storage:</h5>
