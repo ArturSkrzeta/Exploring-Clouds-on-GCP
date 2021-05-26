@@ -271,6 +271,17 @@
 											- in table schema we can find array as REPEATED data type and struct as RECORD,<br>
 											- with arrays and structs we can differ granuality of the table.
 										</li>
+										<li>Offset:
+											<br>
+											<code>WITH items AS</code><br>&nbsp&nbsp&nbsp
+												<code>(SELECT ['apple', 'plum', 'stawberry'] AS items_array)</code><br>
+											<code>SELECT items_array[OFFSET(2)]</code><br>&nbsp&nbsp&nbsp
+												<code>AS item</code><br>&nbsp&nbsp&nbsp
+												<code>FROM items</code>
+											<br><br>
+											- result:<br>
+											<img src="images/offset.JPG">
+										</li>
 										<li>Real data table case with arrays:
 											<br>
 											<img src="images/data_table_with_arrays.JPG" width="820"><span style="font-size:12px">source: google</span><br>
