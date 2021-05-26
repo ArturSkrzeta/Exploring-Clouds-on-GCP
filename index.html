@@ -205,6 +205,7 @@
 											<img src="images/nested_tab.JPG" width="500">
 										</li>
 										<li>Nested and Repeated Fields:
+											<br>
 											<code>SELECT ['apple','plum','pear'] As Items, 'Artur' As Person</code><br><br>
 											- results:<br>
 											<img src="images/nested_fields.JPG">
@@ -216,7 +217,7 @@
 											<br>
 											<code>SELECT Item, Person</code><br>
 											<code>FROM UNNEST(['Apple', 'Pear', 'Plum']) As Item</code><br>
-											<code>CROSS JOIN (SELECT 'Artur' As Person)</code><br>
+											<code>CROSS JOIN (SELECT 'Artur' As Person)</code><br><br>
 											- result:<br>
 											<img src="images/unnest.JPG"><br>
 											- JSON:<br>
@@ -231,7 +232,7 @@
 											<code>SELECT 'Carrot' AS Item</code><br>
 											<code>UNION ALL</code><br>
 											<code>SELECT 'Water' AS Item)</code><br>
-											<code>AS Basket</code><br>
+											<code>AS Basket</code><br><br>
 											- result:<br>
 											<img src="images/select_array.JPG">
 										</li>
