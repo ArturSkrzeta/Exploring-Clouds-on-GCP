@@ -1,0 +1,337 @@
+	<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Portfolio Artur Skrzeta</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><a href="https://arturskrzeta.github.io/"><img src="images/avatar.png" alt="" style="margin-bottom:0px"/></a></span>
+					<h1 id="logo"><a href="https://arturskrzeta.github.io/">Artur Skrzeta</a></h1>
+					<p>Data Analyst<br />
+					+4 years experience</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">Intro</a></li>
+						<li><a href="#two">Features</a></li>
+						<li><a href="#three">Demo</a></li>
+						<li><a href="#four">Setup</a></li>
+						<li><a href="#five">Source Code</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/artur-skrz%C4%99ta-010b23187/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.instagram.com/arturskrrr/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/ArturSkrzeta" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto: arturskrzeta@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+
+										<h2>Exploring Clouds on GCP</h2>
+
+										<h3>Intro</h3>
+
+										<p style="text-align: justify">Here is my brief understanding and usage of the sevices provided by the Google Cloud Platform.</p>
+
+										<h5>GCP infrastructure:</h5>
+										<ul>
+											<img src="images/gcp_infrastrucutre.JPG" width="630"><span style="font-size:12px">source: LinkedIn Learning</span>
+											<li>A service we use is called a resource.</li>
+											<li>Projects groups resource instances.</li>
+											<li>Projects are organized within folders that allows some level of control.</li>
+											<li>We are allowed to have one organization per account on top of everything.</li>
+										</ul>
+
+										<!-- <h5>6. Continuous monitoring:</h5>
+										<ul>
+											<li>...</li>
+											firewall configures some security rules. Accepting connection from trusted network and blocking connection from untrusted network.
+
+										</ul> -->
+
+									</header>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h3>Features</h3>
+									<p>App includes following features:</p>
+									<ul class="feature-icons">
+										<li class="icon solid fa-check">GCP</li>
+									</ul>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>Demo</h3>
+
+									<h5>Cloud Shell:</h5>
+									<ul>
+										<li>It launches a Linux terminal on a Virtual Machine which comes pre-configured with our project's credentials.</li>
+										<li>It has also common programming laguange pre-installed like Python, Node, PHP as well as infrastructure tooling like Docker and Kubernetes.</li>
+										<li>Gives quick access to GCP resources from withing a browser without having to installing any local terminal.</li>
+										<li>It is the best practice to use terminal when going with app to production.
+											Running gcloud scripts allow to do reproducible service configuration and to avoid any miclicks when setting in GCP console.</li>
+									</ul>
+
+									<h5>Cloud SDK</h5>
+									<ul>
+										<li>It is the Google cloud's command line interface tool fot executing commands or making configuration changes to the GCP.</li>
+										<li>It starts from a project folder on your local machine.</li>
+										<li>Once logged into GCP, terminal asks us to choose a project we want to proceed with in a specific region and zone.</li>
+										<li>Besides creating and managing GCP resources it allows us to make scripts and automations.</li>
+										<li>There are 3 main GCP SDK CLI tools:
+											<br>
+											- <b>gsutil</b> for Google Cloud Storage.<br>
+											- <b>bq</b> for BigQuery.<br>
+											- <b>gcloud</b> for the rest of Google Cloud services.
+										</li>
+										<li>Gcloud:
+											<br>
+											- using command <code>gcloud</code> we get all grouped commands available:
+											<br><br>
+											<img src="images/gcloud.JPG" width="650">
+											<br>
+											- switching between projects:
+											<br>
+											<code>gcloud config set project project-name</code>
+											<br>
+											- listing all compute instances:
+											<br>
+											<code>gcloud compute instances list</code>
+											<br>
+											- project initializaiton in current directory:
+											<code>gcloud init {project-name}</code>
+										</li>
+									</ul>
+
+									<h5>Google App Engine:</h5>
+									<ul>
+										<li>It provisions programming technology, librariesa, frameworks, servers and scales app instnaces on demand.</li>
+										<li>Deployment:
+											<br>
+											- getting to the directory where your app is located and running below command:
+											<br>
+											<code>gcloud app deploy app.yaml</code>
+											<br>
+											- in <code>app.yaml</code> we define runtime e.g. <code>runtime: nodejs10</code>
+											<br>
+											- once deployment completed, it provides us with a web path of the application.
+										</li>
+										<li>App Engine components:
+											<br><br>
+											<img src="images/app_engine.JPG" width="650">
+											<br>
+											- GCO can only have one Enginge Application,<br>
+											- when having a large application we can separate logical components into independent services,<br>
+											- each service can have multiple versions that differs with some functionality of front-end element,<br>
+											- each version can have multiple instances for scaling capacity to handle traffic on the application.
+										</li>
+										<li>We can access app's service with url:
+											<br>
+											<code>https://{service-name}-dot-{project-name}-{region-id}.df.r.appspot.com</code>
+										</li>
+									</ul>
+
+									<h5>BigQuery:</h5>
+									<ul>
+										<li>Enterprise data warehouse that supports SQL queries against various data sources.</li>
+										<li>Every time you run the same query, you get the cache of a previous query.</li>
+										<li>Every time you upload data into the BigQuery, all data is compressed and encrypted by default.</li>
+										<li>When new record is saved, it's split up into data encrypted blocks being distributed among servers inside of data center.</li>
+										<li>BigQuery console:
+											<br><br>
+											<img src="images/bigquery.JPG" width="700">
+											<br>
+											- Section 1 selected shows the SQL query area.<br>
+											- Section 2 selected shows the data table.<br>
+											- Data can be uploaded from CSV.<br>
+											- Schema can be set automatically by the BigQuery.<br>
+											- We can check the query outcome in JSON format for example.<br>
+											- Hierarchy: project (main dicionary), dataset (container of data from one specific area), tables/views:<br>
+												<br>
+												<img src="images/project.JPG">
+												<br>
+											- We can proceed with- data visualization in the Data Studio then.
+										</li>
+										<li>BigQuery architecture:
+											<br><br>
+											<img src="images/architecture.JPG" width="650"><span style="font-size:12px">source: GCP</span>
+											<br>
+											- The storage and the computing parts are decoupled.<br>
+											- It can take stream data or batch data as an input.<br>
+											- Storage and compute parts are connected with highly performing network.<br>
+											- We can access BigQuery with GCP console, CLI, by making calls to BigQuery REST API or using client libraries as Java or Python.
+										</li>
+										<li>BigQuery uses a query execution engine <b>Dremel</b>, which scans billions of data rows in a few seconds.
+												Dremel uses parallel quering to scan data distributed into chunks of 64 megabytes among many computing resources nodes, which are grouped into clusters.</li>
+										<li>A tree architecture splitting queries among thousands of computing node ensures high speed performance.</li>
+										<li>Columnar storage meaning accessing only relevant fields not paying attention to the other columns.</li>
+										<li>Technology integration:
+											<br>
+											- integration of Google Sheets with BigQuery by JavaScript.<br>
+										</li>
+										<li>Data models:
+											<br>
+											- denormalized:<br><br>
+											<img src="images/denormalized_tab.JPG" width="400"><br>
+											- normalized (snowflake):<br><br>
+											<img src="images/normalized_tab.JPG" width="720"><br>
+											- normalized vs denormalized:<br><br>
+											<img src="images/normalized_vs_denormalized.JPG" width="500"><span style="font-size:12px">source: google</span><br>
+											- nested in BigQuery:<br><br>
+											<img src="images/nested_tab.JPG" width="400"><br><br>
+											<img src="images/nested_tab_model.JPG" width="300"><span style="font-size:12px">source: google</span><br>
+										</li>
+										<li>Nested and Repeated Fields:
+											<br>
+											<code>SELECT ['apple','plum','pear'] As Items, 'Artur' As Person</code><br><br>
+											- results:<br>
+											<img src="images/nested_fields.JPG">
+											<br>
+											- JSON:<br>
+											<img src="images/json_outcome.JPG">
+										</li>
+										<li>Unnest functionality:
+											<br>
+											<code>SELECT Item, Person</code><br>
+											<code>FROM UNNEST(['Apple', 'Pear', 'Plum']) As Item</code><br>
+											<code>CROSS JOIN (SELECT 'Artur' As Person)</code><br><br>
+											- result:<br>
+											<img src="images/unnest.JPG"><br>
+											- JSON:<br>
+											<img src="images/unnest2.JPG"><br>
+											- we keep the array in FROM line as we treat it as if it's a separate table.
+										</li>
+										<li>Select Array:
+											<br>
+											<code>SELECT ARRAY(</code><br>
+											<code>SELECT 'Apple' AS Item</code><br>
+											<code>UNION ALL</code><br>
+											<code>SELECT 'Carrot' AS Item</code><br>
+											<code>UNION ALL</code><br>
+											<code>SELECT 'Water' AS Item)</code><br>
+											<code>AS Basket</code><br><br>
+											- result:<br>
+											<img src="images/select_array.JPG">
+										</li>
+										<li>Select Struct:
+											<br>
+											<code>SELECT STRUCT(</code><br>
+											<code>21 As Age,</code><br>
+											<code>'Artur' As Name,</code><br>
+											<code>['Apple','Pear','Plum'] As Items)</code><br>
+											<code>As Customers</code><br><br>
+											- result:<br>
+											<img src="images/struct.JPG"><br>
+											- structs works as a container and can house arrays.
+										</li>
+										<li>Select Array with Structs:
+											<br>
+											<code>SELECT ARRAY(</code><br>&nbsp&nbsp
+												<code>SELECT AS STRUCT</code><br>&nbsp&nbsp
+												<code>21 As Age,</code><br>&nbsp&nbsp
+												<code>'Artur' As Name</code><br>&nbsp&nbsp
+												<code>['Apple','Pear','Plum'] As Items</code><br>&nbsp&nbsp
+												<code>UNION ALL</code><br>&nbsp&nbsp
+												<code>SELECT AS STRUCT</code><br>&nbsp&nbsp
+												<code>66 As Age,</code><br>&nbsp&nbsp
+												<code>'Robert' As Name</code><br>&nbsp&nbsp
+												<code>['Carrot','Tomato'] As Items As Items</code><br>
+											<code>) As Customers</code><br><br>
+											- result:<br>
+											<img src="images/array_struct.JPG"><br>
+											- we get array of struct data types,<br>
+											- arrays need to store data of one type,<br>
+											- nested collections as structs perform way better than expensive joins,<br>
+											- in table schema we can find array as REPEATED data type and struct as RECORD.
+										</li>
+									</ul>
+
+									<h5>Cloud Storage:</h5>
+									<ul>
+										<li>It's a file storage service for storing and accessing data on Google's infrastructure.</li>
+										<li>We can work with Cloud Storage using console on web GCP UI or with gsutil CLI.</li>
+										<li>It lets store unstructured data in contaiers called buckets.</li>
+										<li>There are 4 storage classes:
+											<br>
+											- Multi-regional - data accessed frequently aroud the world.<br>
+											- Regional - data accessed frequently in one place in the world.<br>
+											- Nearline - data accessed less than once per a month.<br>
+											- Coldine - data accessed less than once per a year.
+										</li>
+									</ul>
+
+
+									<!-- <h5>Message Broker:</h5>
+									<ul>
+										<li></li>
+									</ul>-->
+
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Setup</h3>
+
+									<p>Google Cloud Account creation required.</p>
+
+								</div>
+							</section>
+
+							<section id="five">
+								<div class="container">
+									<h3>Source Code</h3>
+									<p>You can view the source code: <a href="#">HERE</a></p>
+									<p>&nbsp</p>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<a href="https://arturskrzeta.github.io/" style="padding-bottom:10px;">Back to Portfolio</a>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
