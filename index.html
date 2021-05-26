@@ -207,12 +207,23 @@
 										<li>Nested and Repeated Fields:
 											<br>
 											- Select statement like below:<br>
-											<code>SELECT ['apple','plum','pear'] As Items, 'Artur' As Person</code><br>
+											<code>SELECT ['apple','plum','pear'] As Items, 'Artur' As Person</code><br><br>
 											- results with the following:<br>
 											<img src="images/nested_fields.JPG">
 											<br>
 											- and JSON:<br>
 											<img src="images/json_outcome.JPG">
+										</li>
+										<li>Unnest functionality:
+											<br>
+											- Select:<br>
+											<code>SELECT Item, Person</code><br>
+											<code>FROM UNNEST(['Apple', 'Pear', 'Plum']) As Item</code><br>
+											<code>CROSS JOIN (SELECT 'Artur' As Person)</code><br>
+											- result:<br>
+											<img src="images/unnest.JPG">
+											- JSON:<br>
+											<img src="images/unnest2.JPG">
 										</li>
 									</ul>
 
